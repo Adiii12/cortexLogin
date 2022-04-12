@@ -1,0 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Open+Sans:ital,wght@0,300;1,300;1,600&family=Poppins:wght@100&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+$bgColor: #161616;
+$white: #fff;
+$textColor: #ffbb54;
+$fontfamily: "Poppins";
+$inputBg: #2d2d2d;
+
+body {
+  background-color: $bgColor;
+}
+.top {
+  width: 100%;
+
+  .header {
+    width: 96%;
+
+    max-width: 1160px;
+    margin: 36px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Poppins";
+    .logoMenu {
+      display: flex;
+      align-items: center;
+      h1 {
+        margin-right: 60px;
+        color: $white;
+        font-family: inherit;
+        font-size: 36px;
+        font-weight: bolder;
+      }
+    }
+    // right section start here ====================
+    .right {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: space-between;
+
+      align-items: center;
+      .menu {
+        a {
+          padding: 0px 20px;
+          text-decoration: none;
+          font-family: "Poppins";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 15px;
+          line-height: 22px;
+          font-family: inherit;
+          /* identical to box height */
+          color: $white;
+          opacity: 0.6;
+          &.feature {
+            padding-left: 50px;
+            border-left: 1px solid $white;
+            opacity: 0.6;
+          }
+        }
+      }
+      .socialIcons {
+        display: flex;
+        align-items: center;
+        img {
+          margin: 0px 10px;
+        }
+      }
+    }
+
+    // mobile menu start here ==================
+    .openMobileMenu {
+      display: none;
+      cursor: pointer;
+      border-radius: 5px;
+      background-color: #2d2d2d;
+      img {
+        vertical-align: middle;
+        padding: 7px;
+      }
+    }
+  }
+
+  //   login start here =================
+  .login {
+    width: 96%;
+    max-width: 576px;
+    margin: 80px auto;
+    color: $white;
+    h1 {
+      color: inherit;
+
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 34px;
+      line-height: 51px;
+    }
+    p {
+      margin: 12px 0px;
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 19px;
+      line-height: 28px;
+      /* identical to box height */
+      color: #ffffff;
+      opacity: 0.6;
+    }
+
+    // login with socail account ==========
+    .socialLogin {
+      display: flex;
+      justify-content: space-between;
+      button {
+        display: flex;
+        width: 48%;
+        height: 60px;
+        background-color: transparent;
+        color: $textColor;
+        border: 1px solid #ffbb54;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        cursor: pointer;
+        margin: 40px 0px;
+        p {
+          color: #ffbb54;
+          opacity: 1;
+        }
+        img {
+          width: 32px;
+          height: 32px;
+          margin-right: 10px;
+        }
+      }
+    }
+
+    // separatot line  here=====================
+
+    .separator {
+      display: flex;
+      align-items: center;
+      .line {
+        height: 1px;
+        flex: 1;
+        background-color: #fff;
+        opacity: 0.2;
+      }
+      h2 {
+        padding: 0 2rem;
+        font-family: $fontfamily;
+      }
+    }
+
+    //   login credentials start here ==============
+
+    .loginCredentialTop {
+      margin-top: 50px;
+      input {
+        display: block;
+        width: 100%;
+        height: 60px;
+        background-color: $inputBg;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        padding: 0px 32px;
+        margin-bottom: 14px;
+      }
+    }
+
+    // remeberForgotPass start here===========
+    .remeberForgotPass {
+      display: flex;
+      justify-content: space-between;
+      font-family: $fontfamily;
+      ul {
+        list-style: none;
+        .styled-checkbox {
+          position: absolute;
+          opacity: 0;
+          & + label {
+            position: relative;
+            cursor: pointer;
+            padding: 0;
+          } // Box.
+          & + label:before {
+            content: "";
+            margin-right: 10px;
+            display: inline-block;
+            vertical-align: text-top;
+            width: 20px;
+            height: 20px;
+            background: white;
+            border-radius: 3px;
+          }
+          // Box hover
+          &:hover + label:before {
+            background: $textColor;
+          }
+          // Box focus
+          &:focus + label:before {
+            box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+          }
+          // Box checked
+          &:checked + label:before {
+            background: $textColor;
+          }
+          // Checkmark. Could be replaced with an image
+          &:checked + label:after {
+            content: "";
+            position: absolute;
+            left: 5px;
+            top: 9px;
+            background: black;
+            width: 2px;
+            height: 2px;
+            box-shadow: 2px 0 0 black, 4px 0 0 black, 4px -2px 0 black,
+              4px -4px 0 black, 4px -6px 0 black, 4px -8px 0 black;
+            transform: rotate(45deg);
+          }
+        }
+      }
+      a {
+        text-decoration: none;
+        color: $textColor;
+      }
+    }
+
+    // loginToAccount button start here ==========
+    .loginToAccount {
+      width: 100%;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #ffbb54;
+      border-radius: 20px;
+      border: none;
+      outline: none;
+      margin-top: 40px;
+      cursor: pointer;
+      font-family: "Poppins";
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 24px;
+      color: #08071b;
+    }
+
+    // <!-- not a member yet start here ========= -->
+    .notYetMember {
+      margin-top: 26px;
+      display: flex;
+      align-items: center;
+      font-family: $fontfamily;
+      a {
+        color: #ffbb54;
+        font-family: $fontfamily;
+        margin-left: 10px;
+        text-decoration: none;
+      }
+    }
+
+    // <!-- privacy copyright start here==================== -->
+    .privacyCopyRight {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 54px;
+      a {
+        text-decoration: none;
+        color: #ffbb54;
+        font-family: $fontfamily;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .top {
+    .header {
+      .right {
+        display: none !important;
+      }
+      .openMobileMenu {
+        display: block;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 669px) {
+  .top {
+    .login {
+      .socialLogin {
+        margin-top: 40px;
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+        button {
+          width: 100%;
+          margin: 10px 0px;
+          height: 50px;
+        }
+      }
+      h1 {
+        font-size: 19px;
+        line-height: 30px;
+      }
+      p {
+        font-size: 11px;
+        line-height: 17px;
+      }
+      .loginToAccount{
+          height: 50px;
+      }
+    }
+  }
+}
